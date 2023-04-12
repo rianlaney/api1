@@ -1,0 +1,44 @@
+Check if the POST request accept params, queries, and/or a body. Which one(s) and what information is it expecting to be sent?
+
+
+
+body - id,text,date
+queries
+
+What data type does the GET request return?
+
+Obj
+
+What would the URL look like for deleting the post with the id 555? (This post does not exist anymore, but the syntax is the same for existing posts, )
+
+curl -X 'DELETE' \
+  'https://practiceapi.devmountain.com/api/posts?id=555' \
+  -H 'accept: application/json'
+
+List the possible response codes from the GET request at ‘/posts/filter’
+
+200
+
+Create a post whose text is your name, record the URL and body here:
+
+https://practiceapi.devmountain.com/api/posts/id:19
+
+
+What would the URL and body object be to update the post you just made to contain your faovrite color instead of your name?
+
+https://practiceapi.devmountain.com/api/posts?id=19
+
+What is the URL to get posts that contain the text “blue”?
+
+https://practiceapi.devmountain.com/api/posts/filter?text=blue
+
+Make a request to GET all the posts. What are the content type and charset of the response? (Hint: look on the Headers)
+
+
+
+What would cause a PUT request to return a 409 status?
+
+Request is missing either required id in the query or text in the body.
+
+
+What happens if you try to send a query in the GET request URL? Why do you get that response?
